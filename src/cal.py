@@ -31,6 +31,10 @@ def numify(arg):
         return False
 
 
+if (len(sys.argv) > 3):
+    print("Program expects input in the form of `month year`")
+    sys.exit()
+
 month = len(sys.argv) > 1 and numify(
     sys.argv[1]) or datetime.date.today().month
 year = len(sys.argv) > 2 and numify(sys.argv[2]) or datetime.date.today().year
